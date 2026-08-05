@@ -1,0 +1,194 @@
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+
+    height:100vh;
+    background-image:url("forestimage.avif");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* OVERLAY */
+
+.overlay{
+
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* CONTENT */
+
+.auth-card{
+
+    width:100%;
+    max-width:360px;
+
+    text-align:center;
+}
+
+/* TITLE */
+
+.auth-card h1{
+
+    font-size:34px;
+
+    color:#374151;
+
+    margin-bottom:8px;
+
+    font-weight:700;
+}
+
+.tagline{
+
+    color:#383f3b;
+
+    font: weight 100px;
+
+    font-size:14px;
+
+    margin-bottom:35px;
+   
+}
+
+/* FORM */
+
+.form-box{
+
+    display:none;
+}
+
+.form-box.active{
+
+    display:block;
+     
+}
+
+.form-box h2{
+
+    font-size:28px;
+
+    color:#666363;
+
+    margin-bottom:10px;
+}
+
+.sub-title{
+
+    color:#9ca3af;
+
+    font-size:14px;
+
+    margin-bottom:28px;
+}
+
+/* INPUT */
+
+.input-group{
+
+    margin-bottom:18px;
+
+    text-align:left;
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    color:#fbfcfd;
+
+    font-size:14px;
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:rgb(232, 232, 240);
+
+    font-size:14px;
+
+    outline:none;
+}
+
+/* BUTTON */
+
+.btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#22c55e;
+
+    color:#f2faf6;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    margin-top:8px;
+}
+
+/* BOTTOM */
+
+.bottom-text{
+
+    margin-top:20px;
+
+    color: rgb(237, 240, 237);
+
+    font-size:14px;
+}
+
+.bottom-text span{
+
+    color:#f8faf9;
+
+    font-weight:600;
+
+    cursor:pointer;
+}
+.overlay h2{
+    color: #16a34a;
+}
+.sub-title{
+    color: #2c3d33;
+     font: weight 100px;;
+
+}
+
+.error{
+    color:red;
+    font-size:13px;
+    display:block;
+    margin-top:5px;
+}

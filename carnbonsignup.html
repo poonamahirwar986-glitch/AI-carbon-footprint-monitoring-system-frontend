@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carbon Tracker</title>
+
+    <link rel="stylesheet" href="carbonsignup.css">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- OVERLAY -->
+    <div class="overlay">
+
+        <!-- CARD -->
+        <div class="auth-card">
+
+            <h1>Carbon Tracker </h1>
+
+            <p class="tagline">
+                Track. Reduce. Save Earth.
+            </p>
+
+            <!-- LOGIN -->
+            <div class="form-box active" id="loginForm">
+
+                <h2>Welcome Back</h2>
+
+                <p class="sub-title">
+                    Login to continue
+                </p>
+
+                <form>
+
+                    <div class="input-group" >
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="password" placeholder="Enter password">
+                    </div>
+
+                    <button type="button" class="btn" onclick="login()">Login</button>
+                    
+                </form>
+
+
+                <div class="bottom-text">
+                    Don't have an account?
+                    <span id="showSignup">Sign Up</span>
+                </div>
+
+            </div>
+
+            <!-- SIGNUP -->
+            <div class="form-box" id="signupForm">
+
+                <h2>Create Account</h2>
+
+                <p class="sub-title">
+                    Create your account
+                </p>
+
+                <form>
+
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text"  id="signupName" placeholder="Enter full name">
+                        <small class="error" id="nameError"></small>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" id="signupEmail" placeholder="Enter your email">
+                         <small class="error" id="emailError"></small>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="signupPassword" placeholder="Create password">
+                        <small class="error" id="passwordError"></small>
+                    </div>
+
+                    <button type="button" class="btn" onclick="signup()">Sign Up</button>
+
+                </form>
+
+                <div class="bottom-text">
+                    Already have an account?
+                    <span id="showLogin">Login</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="carbonsignup.js"></script>
+    
+
+</body>
+
+</html>

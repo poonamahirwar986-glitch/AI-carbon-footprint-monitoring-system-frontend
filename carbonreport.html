@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Report</title>
+
+    <link rel="stylesheet" href="carbonreport.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    </head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div>
+
+            <div class="logo-section">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <h2>Carbon Tracker</h2>
+
+            </div>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="Carbondashboard.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="carbonCalculate.html">
+                        <i class="fa-solid fa-calculator"></i>
+                        <span>Calculate Carbon</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pastentriespade.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Past Entries</span>
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="carbonreport.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+
+                 <li>
+                    <a href="AIAdvisor.html">
+                    <i class="fa-solid fa-robot"></i>
+                    AI Advisor</a></li>
+                 <li>
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="setting.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="logout">
+
+            <a href="carnbonsignup.html">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+    
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content" id="mainContent">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div class="menu-toggle" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="top-right">
+
+                <div class="notification">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="badge">3</span>
+
+                </div>
+
+                <div class="profile">
+
+                   <img id="topProfileImage" src="profileimage2.jpg" alt="Profile">
+                    
+
+                     <div class="profile-info">
+                            <h4 class="profile-name"></h4>
+                            <p>User</p>
+                        </div>
+
+                    <i class="fa-solid fa-angle-down"></i>
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PAGE HEADER -->
+
+        <div class="page-header">
+
+            <h1>Carbon Reports</h1>
+
+            <p>
+                Generate and monitor your carbon footprint reports
+            </p>
+
+        </div>
+
+
+        <!-- REPORT GRID -->
+
+        <div class="report-grid">
+
+
+            <!-- FORM -->
+
+            <div class="report-form-card">
+
+                <h2>Generate New Report</h2>
+
+                <form id="reportForm">
+
+                    <div class="input-group">
+
+                        <label>Start Date</label>
+
+                        <input type="date" required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>End Date</label>
+
+                        <input type="date" required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Report Type</label>
+
+                        <select id="reportType">
+
+                            <option>Weekly Report</option>
+
+                            <option>Monthly Report</option>
+
+                            <option>Yearly Report</option>
+
+                        </select>
+
+                    </div>
+
+                    <button type="submit">
+
+                        Generate Report
+
+                        <i class="fa-solid fa-download"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- PREVIEW -->
+
+            <div class="preview-card">
+
+                <div class="report-icon">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                </div>
+
+                <h2>Report Preview</h2>
+
+                <p>
+                    Generate a report to download detailed
+                    carbon footprint analytics.
+                </p>
+
+                <div class="report-details">
+
+                    <div>
+
+                        <span>Total Emission</span>
+
+                        <strong id="previewEmission">0 kg</strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>Entries</span>
+
+                        <strong id="previewEntries">0</strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>Trees Needed</span>
+
+                        <strong id="previewTrees">0</strong>
+
+                    </div>
+
+                </div>
+
+                <div class="status-box" id="reportStatus">
+
+                    No Report Generated Yet
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RECENT RTS -->
+
+        <div class="recent-reports">
+
+            <h2>Recent Reports</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Report Name</th>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Download</th>
+
+                    </tr>
+
+                </thead>
+
+              <tbody id="recentReportsBody">
+
+              </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="carbonreport.js"></script>
+
+<script src="Auth.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+</html>

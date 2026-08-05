@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculate Carbon</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Carboncalculate.css">
+
+    <!-- FONT AWESOME -->
+ <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!--  SIDEBAR -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <!-- LOGO -->
+
+            <div class="logo-section">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <h2>Carbon Tracker</h2>
+
+            </div>
+
+            <!-- MENU -->
+
+            <ul class="menu">
+
+                <li>
+                    <a href="Carbondashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        <span>Dashboard</span>
+
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="carbonCalculate.html">
+
+                        <i class="fa-solid fa-calculator"></i>
+
+                        <span>Calculate Carbon</span>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pastentriespade.html">
+
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+
+                        <span>Past Entries</span>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="carbonreport.html">
+
+                        <i class="fa-solid fa-file"></i>
+
+                        <span>Reports</span>
+
+                    </a>
+                </li>
+                <li>
+                <a href="AIAdvisor.html">
+                    <i class="fa-solid fa-robot"></i>
+
+                    AI Advisor
+
+                </a>
+
+            </li>
+
+                <li>
+                    <a href="profile.html">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <span>Profile</span>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="setting.html">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        <span>Settings</span>
+
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- LOGOUT -->
+
+            <div class="logout">
+
+                <a href="carnbonsignup.html">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content"  id="mainContent">
+
+            <!-- TOPBAR -->
+
+            <div class="topbar">
+
+                 <div class= "logo-menu" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                    
+                </div>
+
+                <div class="top-right">
+
+                    <!-- NOTIFICATION -->
+
+                    <div class="notification">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="badge">3</span>
+
+                    </div>
+
+                    <!-- PROFILE -->
+
+                    <div class="profile">
+
+                        <img id="topProfileImage" src="profileimage2.jpg" alt="Profile">
+
+                        <div class="profile-info">
+                            <h4 class="profile-name"></h4>
+                            <p>User</p>
+
+                        </div>
+
+                        <i class="fa-solid fa-angle-down"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PAGE HEADER -->
+
+            <div class="page-header">
+
+                <h1>Calculate Carbon</h1>
+
+                <p>
+                    Enter your details below to calculate your carbon footprint
+                </p>
+
+            </div>
+
+            <!-- MAIN GRID -->
+
+            <div class="calculate-grid">
+
+                <!-- FORM CARD -->
+
+                <div class="form-card">
+
+                    <form id="carbonForm">
+
+                        <!-- ELECTRICITY -->
+
+                        <div class="input-group">
+
+                            <label for="electricity">
+
+                                <i class="fa-solid fa-bolt"></i>
+
+                                Electricity Usage (kWh)
+
+                            </label>
+
+                            <input
+                                type="number"
+                                id="electricity"
+                                name="electricity"
+                                placeholder="Enter electricity usage"
+                                required
+                            >
+
+                        </div>
+
+                        <!-- TRAVEL -->
+
+                        <div class="input-group">
+
+                            <label for="travel">
+
+                                <i class="fa-solid fa-car"></i>
+
+                                Travel Distance (km)
+
+                            </label>
+
+                            <input
+                                type="number"
+                                id="travel"
+                                name="travel"
+                                placeholder="Enter travel distance"
+                                required
+                            >
+
+                        </div>
+
+                        <!-- WASTE -->
+
+                        <div class="input-group">
+
+                            <label for="waste">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                                Waste Generated (kg)
+
+                            </label>
+
+                            <input
+                                type="number"
+                                id="waste"
+                                name="waste"
+                                placeholder="Enter waste generated"
+                                required
+                            >
+
+                        </div>
+
+                        <!-- BUTTON -->
+
+                        <button
+                            type="submit"
+                            id="calculateBtn"
+                        >
+
+                            Calculate Carbon
+
+                            <i class="fa-solid fa-calculator"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <!-- RESULT CARD -->
+
+                <div class="result-card">
+
+                    <h2>Total Emission</h2>
+
+                    <!-- CIRCLE -->
+
+                    <div class="circle">
+
+                        <div class="circle-inner">
+
+                            <h1 id="totalEmission">
+                                0.0
+                            </h1>
+
+                            <span>kg CO₂</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="result-message">
+
+                        <p id="message">
+                            Start calculating your footprint 🌱
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <div class="first-time-message" id="firstMessage">
+
+🌱 Welcome to Carbon Tracker!  
+First calculate your carbon footprint to unlock your complete dashboard.
+
+</div>
+
+    <!-- JS -->
+   <script src="Auth.js"></script>
+    <script src="Carboncalculate.js"></script>
+
+</body>
+
+</html>

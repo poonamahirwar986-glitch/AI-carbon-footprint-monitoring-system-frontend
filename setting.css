@@ -1,0 +1,716 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar.hide{
+    width:0;
+    min-width:0;
+    padding:0;
+    overflow:hidden;
+}
+
+.sidebar.hide + .main-content{
+    margin-left:0;
+}
+
+.main-content{
+    transition:0.3s ease;
+    
+}
+
+.sidebar{
+    transition:0.3s ease;
+}
+.sidebar{
+    width:250px;
+    min-width:250px;
+    height:100vh;
+    background:linear-gradient(to bottom,#06223a,#04111f);
+    color:white;
+    position:fixed;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:20px 0;
+}
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:0 25px;
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#16a34a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo-icon i{
+    font-size:18px;
+}
+
+.menu{
+    list-style:none;
+    margin-top:40px;
+}
+
+.menu li{
+    margin:8px 15px;
+}
+
+.menu li a{
+    text-decoration:none;
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:14px 18px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.menu li a:hover,
+.menu .active a{
+    background:#16a34a;
+}
+
+.logout{
+    padding:0 20px;
+}
+
+.logout a{
+    color:#ff8f8f;
+    text-decoration:none;
+    display:flex;
+    gap:10px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content{
+    flex:1;
+    margin-left:250px;
+    padding:25px;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.top-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.notification{
+    position:relative;
+    font-size:20px;
+}
+
+.badge{
+    position:absolute;
+    top:-8px;
+    right:-8px;
+    width:18px;
+    height:18px;
+    background:#16a34a;
+    color:white;
+    border-radius:50%;
+    font-size:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.profile{
+    background:white;
+    padding:8px 14px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.profile img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+
+.profile-info-top p{
+    color:gray;
+    font-size:13px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.dashboard-header{
+    margin-top:25px;
+}
+
+.dashboard-header h1{
+    font-size:36px;
+}
+
+.dashboard-header p{
+    color:gray;
+    margin-top:5px;
+}
+
+/* =========================
+   SETTINGS GRID
+========================= */
+
+.settings-grid{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:20px;
+}
+
+.settings-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.settings-card h2{
+    margin-bottom:20px;
+    color:#06223a;
+    font-size:22px;
+}
+
+.settings-card h2 i{
+    margin-right:10px;
+    color:#16a34a;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:15px;
+}
+
+.input-group label{
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-group input{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+}
+
+.input-group input:focus{
+    border-color:#16a34a;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.save-btn{
+    margin-top:10px;
+    background:#16a34a;
+    color:white;
+    border:none;
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.save-btn:hover{
+    background:#15803d;
+}
+
+
+#deleteAccountBtn {
+    margin-top: 15px;
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#deleteAccountBtn:hover {
+    background: #b91c1c;
+}
+/* =========================
+   TOGGLE SWITCH
+========================= */
+
+.toggle-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.switch{
+    position:relative;
+    display:inline-block;
+    width:60px;
+    height:34px;
+}
+
+.switch input{
+    opacity:0;
+    width:0;
+    height:0;
+}
+
+.slider{
+    position:absolute;
+    cursor:pointer;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#ccc;
+    transition:.4s;
+    border-radius:34px;
+}
+
+.slider:before{
+    position:absolute;
+    content:"";
+    height:26px;
+    width:26px;
+    left:4px;
+    bottom:4px;
+    background:white;
+    transition:.4s;
+    border-radius:50%;
+}
+
+input:checked + .slider{
+    background:#16a34a;
+}
+
+input:checked + .slider:before{
+    transform:translateX(26px);
+}
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.check-row{
+    margin:12px 0;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* =========================
+   DANGER CARD
+========================= */
+
+.danger-card{
+    border-left:5px solid #dc2626;
+}
+
+.danger-card p{
+    color:#666;
+    margin-top:10px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN 
+========================= */
+
+
+/* Tablet */
+@media(max-width:992px){
+
+    .sidebar{
+
+        width:80px;
+        min-width:80px;
+
+    }
+
+
+    .logo-section h2,
+    .menu span,
+    .logout span{
+
+        display:none;
+
+    }
+
+
+    .logo-section{
+
+        justify-content:center;
+        padding:0;
+
+    }
+
+
+    .menu li{
+
+        margin:8px;
+
+    }
+
+
+    .menu li a{
+
+        justify-content:center;
+        padding:14px;
+
+    }
+
+
+    .logout{
+
+        padding:0;
+
+    }
+
+
+    .logout a{
+
+        justify-content:center;
+
+    }
+
+
+
+    .main-content{
+
+        margin-left:80px;
+        padding:20px;
+
+    }
+
+
+
+    .dashboard-header h1{
+
+        font-size:32px;
+
+    }
+
+
+
+    .settings-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+
+
+
+/* Mobile */
+@media(max-width:768px){
+
+
+    body{
+
+        overflow-x:hidden;
+
+    }
+
+
+
+    /* Sidebar */
+
+    .sidebar{
+
+        left:-250px;
+        width:250px;
+        min-width:250px;
+        z-index:1000;
+
+    }
+
+
+
+    .sidebar.show{
+
+        left:0;
+
+    }
+
+
+
+    .logo-section h2,
+    .menu span,
+    .logout span{
+
+        display:block;
+
+    }
+
+
+
+    .logo-section{
+
+        justify-content:flex-start;
+        padding:0 25px;
+
+    }
+
+
+
+    .menu li a{
+
+        justify-content:flex-start;
+
+    }
+
+
+
+    /* Main */
+
+    .main-content{
+
+        margin-left:0;
+        padding:15px;
+
+    }
+
+
+
+    /* Topbar */
+
+
+    .topbar{
+
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+
+    }
+
+
+
+    .top-right{
+
+        gap:10px;
+
+    }
+
+
+
+    .profile{
+
+        padding:6px;
+
+    }
+
+
+
+    .profile img{
+
+        width:38px;
+        height:38px;
+
+    }
+
+
+
+    .profile-info{
+
+        display:none;
+
+    }
+
+
+
+    /* Header */
+
+
+    .dashboard-header{
+
+        margin-top:20px;
+
+    }
+
+
+    .dashboard-header h1{
+
+        font-size:26px;
+
+    }
+
+
+    .dashboard-header p{
+
+        font-size:14px;
+
+    }
+
+
+
+    /* Cards */
+
+
+    .settings-grid{
+
+        grid-template-columns:1fr;
+        gap:15px;
+
+    }
+
+
+
+    .settings-card{
+
+        padding:18px;
+        border-radius:14px;
+
+    }
+
+
+
+    .settings-card h2{
+
+        font-size:19px;
+
+    }
+
+
+
+    /* Inputs */
+
+
+    .input-group input{
+
+        width:100%;
+        padding:12px;
+
+    }
+
+
+
+    /* Buttons */
+
+
+    .save-btn,
+    #deleteAccountBtn{
+
+        width:100%;
+        padding:13px;
+
+    }
+
+
+
+}
+
+
+
+/* Small Mobile */
+@media(max-width:480px){
+
+
+    .main-content{
+
+        padding:10px;
+
+    }
+
+    .dashboard-header h1{
+
+        font-size:23px;
+
+    }
+
+    .settings-card{
+
+        padding:15px;
+
+    }
+
+    .settings-card h2{
+
+        font-size:17px;
+
+    }
+
+    .check-row{
+
+        font-size:14px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+        left:-250px;
+        width:250px;
+        min-width:250px;
+        z-index:1000;
+    }
+
+
+    .sidebar.show{
+        left:0;
+    }
+
+
+    .main-content{
+        margin-left:0;
+    }
+
+}
+.menu-btn{
+    background:none;
+    border:none;
+    font-size:24px;
+    cursor:pointer;
+}

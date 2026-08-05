@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings</title>
+
+    <link rel="stylesheet" href="setting.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="logo-section">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <h2>Carbon Tracker</h2>
+
+            </div>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="Carbondashboard.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="carbonCalculate.html">
+                        <i class="fa-solid fa-calculator"></i>
+                        <span>Calculate Carbon</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pastentriespade.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Past Entries</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="carbonreport.html">
+                        <i class="fa-solid fa-file"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+            <li><a href="AIAdvisor.html"><i class="fa-solid fa-robot"></i>AI Advisor</a></li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="setting.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="logout">
+
+                <a href="carnbonsignup.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+                <div class="menu-toggle"  id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="top-right">
+
+                    <div class="notification">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+          
+                     <div class="profile">
+
+                    <img id="topProfileImage"  src="profileimage2.jpg" alt="Profile">
+                    <div class="profile-info">
+                     <h4 class="profile-name"></h4>
+                         <p>User</p>
+                        </div>
+
+                             <i class="fa-solid fa-angle-down"></i>
+
+                        
+
+                    </div>
+
+                </div>
+        </header>
+
+            <!-- PAGE HEADER -->
+
+            <div class="dashboard-header">
+
+                <div>
+                    <h1>Settings</h1>
+                    <p>Manage your account preferences and system settings</p>
+                </div>
+
+            </div>
+
+            <!-- SETTINGS SECTION -->
+
+            <div class="settings-grid">
+
+                <!-- ACCOUNT -->
+
+                <div class="settings-card">
+
+                    <h2>
+                        <i class="fa-solid fa-user-gear"></i>
+                        Account Settings
+                    </h2>
+
+                    <div class="input-group">
+                        <label>Current Password</label>
+                        <input type="password">
+                    </div>
+
+                    <div class="input-group">
+                        <label>New Password</label>
+                        <input type="password">
+                    </div>
+
+                    <button class="save-btn">
+                        Change Password
+                    </button>
+
+                </div>
+
+                <!-- NOTIFICATION -->
+
+                <div class="settings-card">
+
+                    <h2>
+                        <i class="fa-solid fa-bell"></i>
+                        Notifications
+                    </h2>
+
+                    <div class="check-row">
+                        <input type="checkbox" id="notificationToggle">
+                        <label>Email Notifications</label>
+                    </div>
+
+                    <div class="check-row">
+                        <input type="checkbox" id="reportGenerationToggle">
+                        <label>Monthly Reports</label>
+                    </div>
+
+                    <div class="check-row">
+                        <input type="checkbox" id="ecoTips">
+                        <label>Eco Tips & Suggestions</label>
+                    </div>
+
+                </div>
+
+                <!-- GOALS -->
+
+                <div class="settings-card">
+
+                    <h2>
+                        <i class="fa-solid fa-leaf"></i>
+                        Carbon Goals
+                    </h2>
+
+                    <div class="input-group">
+                        <label>Monthly Carbon Goal (kg)</label>
+                        <input type="number" id="carbonGoal" value="">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Tree Plantation Goal</label>
+                        <input type="number" id="treeGoal" value="">
+                    </div>
+
+                    <button id="saveSettingsBtn"
+                    class="save-btn">
+                        Save Goals
+                    </button>
+
+                </div>
+
+                <!-- DANGER ZONE -->
+
+                <div class="settings-card danger-card">
+
+                    <h2>
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Danger Zone
+                    </h2>
+
+                    <p>
+                        Deleting your account will permanently remove all data.
+                    </p>
+
+                   <button id="deleteAccountBtn" class="delete-btn">
+                        Delete Account
+                         </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="setting.js"></script>
+<script src="Auth.js"></script>
+</body>
+
+</html>
+

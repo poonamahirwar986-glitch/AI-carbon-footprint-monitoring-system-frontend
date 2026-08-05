@@ -1,0 +1,183 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+
+    <link rel="stylesheet" href="profile.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar" id="sidebar">
+
+             <div class="logo-section">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <h2>Carbon Tracker</h2>
+                    </div>
+
+
+            <ul class="menu">
+                <li><a href="Carbondashboard.html"><i class="fa fa-home"></i> Dashboard</a></li>
+                <li><a href="carbonCalculate.html"><i class="fa fa-calculator"></i> Calculate Carbon</a></li>
+                <li><a href="pastentriespade.html"><i class="fa fa-history"></i> Past Entries</a></li>
+                <li><a href="carbonreport.html"><i class="fa fa-file"></i>Reports</a></li>
+               <li><a href="AIAdvisor.html"><i class="fa-solid fa-robot"></i>AI Advisor</a></li>
+                <li class="active"><a href="profile.html"><i class="fa fa-user"></i>Profile</a></li>
+                <li><a href="setting.html"><i class="fa fa-cog"></i>Settings</a></li>
+            </ul>
+
+        <div class="logout">
+
+                <a href="carnbonsignup.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+
+            </div>    
+        </aside>
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content" id="main-content">
+    <div class="topbar">
+
+                <div class= "logo-menu" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                    
+                </div>
+
+                <div class="top-right">
+
+                    <!-- NOTIFICATION -->
+
+                    <div class="notification">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+
+                    <!-- PROFILE -->
+
+                    <div class="profile">
+
+                      <img id="topProfileImage" src="profileimage2.jpg" alt="Profile">
+
+                        <div class="profile-info">
+                            <h4 class="profile-name"></h4>
+                            <p>User</p>
+                        </div>
+
+                        <i class="fa-solid fa-angle-down"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PAGE HEADER -->
+
+            <div class="page-header">
+
+                <h1>My Profile</h1>
+
+                <p>
+                    Manage your account information and carbon statistics
+                </p>
+
+            </div>
+
+            <!-- PROFILE CARD -->
+
+            <div class="profile-card">
+
+                <!-- LEFT -->
+                <div class="profile-left">
+
+                    <img id="profileImage"
+                        src="profileimage2.jpg"
+                        alt="Profile">
+
+                    <h2 class="profile-name">
+                        User Name
+                    </h2>
+
+                    <p>
+                        Environmental Enthusiast 🌱
+                    </p>
+
+                    <input type="file"
+                        id="imageInput"
+                        hidden>
+
+                    <button id="changePhotoBtn">
+                        Change Photo
+                    </button>
+
+                </div>
+
+                <!-- RIGHT -->
+                 
+                <div class="profile-right">
+
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="fullName">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" id="email">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <input type="text" id="phone">
+                    </div>
+
+                    <div class="input-group">
+                        <label>City</label>
+                        <input type="text" id="city">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Country</label>
+                        <input type="text" id="country">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Joined Date</label>
+                        <input type="text" id="joinedDate">
+                    </div>
+
+                    <button id="saveBtn" class="save-btn">
+                        Save Changes
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="profile.js"></script>
+    <script src="Auth.js"></script>
+
+</body>
+
+</html>

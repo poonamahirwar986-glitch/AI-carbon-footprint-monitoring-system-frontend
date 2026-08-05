@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Tracker Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Carbondashboard.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    
+</head>
+
+<body>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <!-- LOGO -->
+            <div class="logo-section">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <h2>Carbon Tracker</h2>
+
+            </div>
+
+            <!-- MENU -->
+            <ul class="menu">
+
+                <li class="active">
+                    <a href="Carbondashboard.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="carbonCalculate.html">
+                        <i class="fa-solid fa-calculator"></i>
+                        <span>Calculate Carbon</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pastentriespade.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Past Entries</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="carbonreport.html">
+                        <i class="fa-solid fa-file"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+                    <li><a href="AIAdvisor.html"><i class="fa-solid fa-robot"></i>AI Advisor</a></li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="setting.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- LOGOUT -->
+            <div class="logout">
+
+                <a href="carnbonsignup.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content" id="main-content">
+
+            <!-- TOPBAR -->
+            <div class="topbar">
+
+                <div class= "logo-menu" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                    
+                </div>
+
+                <div class="top-right">
+
+                    <!-- NOTIFICATION -->
+                    <div class="notification">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+
+                    <!-- PROFILE -->
+                    <div class="profile">
+
+                        <img id="topProfileImage" src="profileimage2.jpg" alt="Profile">
+                        <div class="profile-info">
+                            <h4 class="profile-name"></h4>
+                            <p>User</p>
+                        </div>
+
+                        <i class="fa-solid fa-angle-down"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- DASHBOARD HEADER -->
+            <div class="dashboard-header">
+
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back👋</p>
+                </div>
+
+            </div>
+
+            <!-- CARDS -->
+            <div class="cards">
+
+                <!-- CARD 1 -->
+                <div class="card">
+
+                    <div class="card-icon green">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+
+                    <h4>Total CO₂ Emission</h4>
+
+                    <h2 id="totalEmissionCard">0 kg</h2>
+                    <p>Total Carbon Footprint</p>
+
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card">
+
+                    <div class="card-icon blue">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <h4>Total Entries</h4>
+
+                    <h2 id="totalEntriesCard">0</h2>
+
+                    <p>All Entries</p>
+
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card">
+
+                    <div class="card-icon orange">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <h4>Average Per Day</h4>
+
+                    <h2 id="averageEmissionCard">0 kg</h2>
+
+
+                    <p>Average Emission</p>
+
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="card">
+
+                    <div class="card-icon purple">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+
+                    <h4>Trees Required</h4>
+
+                    <h2 id="treesRequiredCard">0</h2>
+
+                    <p>To Offset Emission</p>
+
+                </div>
+
+            </div>
+
+            <!-- CHART SECTION -->
+            <div class="chart-section">
+
+                <!-- LINE CHART -->
+                <div class="chart-card">
+
+                    <div class="chart-header">
+
+                        <h3>
+                            Monthly Carbon Footprint (kg CO₂)
+                        </h3>
+
+                        <select>
+                            <option>This Year</option>
+                            <option>Last Year</option>
+                        </select>
+
+                    </div>
+
+                    <canvas id="barChart"></canvas>
+
+                </div>
+
+                <!-- PIE CHART -->
+                <div class="chart-card ">
+
+                    <h3>Emission Breakdown</h3>
+
+                    <canvas id="pieChart"></canvas>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+   
+ 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+    <!-- JS -->
+     <script src="Auth.js"></script>
+    <script src="CarbonDashboard.js"></script>
+
+</body>
+
+</html>
+

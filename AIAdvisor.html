@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Carbon Advisor</title>
+
+<link rel="stylesheet" href="AIAdvisor.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+ <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <!-- LOGO -->
+            <div class="logo-section">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <h2>Carbon Tracker</h2>
+
+            </div>
+
+            <!-- MENU -->
+             
+            <ul class="menu">
+
+                <li class="active">
+                    <a href="Carbondashboard.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="carbonCalculate.html">
+                        <i class="fa-solid fa-calculator"></i>
+                        <span>Calculate Carbon</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pastentriespade.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Past Entries</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="carbonreport.html">
+                        <i class="fa-solid fa-file"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+                    <li><a href="AIadvisor.html"><i class="fa-solid fa-robot"></i>
+                    <span>AI Advisor</span>
+                 </a></li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="setting.html">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- LOGOUT -->
+            <div class="logout">
+
+                <a href="carnbonsignup.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+         <!--MAIN-->
+
+<main class="main-content" id="main-content">
+<!-- TOPBAR -->
+
+    <div class="topbar">
+
+        <div class="logo-menu" id="menuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <h2>🤖 AI Sustainable Advisor</h2>
+
+        <div class="right-top">
+
+            <div class="notification">
+                <i class="fa-regular fa-bell"></i>
+                <span class="badge">3</span>
+            </div>
+
+            <div class="profile-box">
+
+                <img id="topProfileImage" src="profileimage2.jpg" alt="Profile">
+
+                <div>
+                    <h4 class="profile-name"></h4>
+                    <p>User</p>
+                </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<!-- AI SUMMARY -->
+
+
+<section class="summary-card">
+
+
+<h3>
+🌱 AI Carbon Insights
+</h3>
+
+<div class="summary-grid">
+<div class="card"><h4>Carbon Score</h4>
+<p id="carbonScore"></p>
+</div><div class="card"><h4>Status</h4>
+<p id="status"></p></div>
+<div class="card"><h4>Highest Source</h4>
+<p id="source"></p></div>
+<div class="card"><h4>Estimated Reduction</h4>
+<p id="saving"></p></div>
+</div>
+</section>
+
+<!-- QUICK ACTION  -->
+
+<section class="quick-actions">
+
+<button class="quick-btn">
+
+⚡ Reduce Electricity
+
+</button>
+
+<button class="quick-btn">
+
+🚗 Travel Tips
+
+</button>
+
+<button class="quick-btn">
+
+🌳 Tree Plantation
+
+</button>
+
+<button class="quick-btn">
+
+🗑️ Waste Management Tips
+
+</button>
+
+
+</section>
+
+ <!-- CHAT  -->
+
+
+<section class="chat-section">
+
+<div id="chatBox"
+class="chat-box">
+<div class="ai-message">
+ </div>
+
+</div>
+
+<div id="typingBox"
+class="typing"
+style="display:none;">
+
+🤖 AI is analyzing your carbon data...
+
+</div>
+
+<div class="chat-input">
+
+<input 
+type="text"
+id="userMessage"
+placeholder="Ask anything about your carbon footprint...">
+
+<button id="sendBtn">
+
+<i class="fa-solid fa-paper-plane"></i
+Send
+</button>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="Auth.js"></script>
+
+<script src="AIAdvisor.js"></script>
+
+
+
+</body>
+
+</html>
