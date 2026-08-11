@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8080/user";
+const BASE_URL = "https://carbon-backend-2.onrender.com/user";
 
 // SIGNUP 
 
@@ -136,7 +136,7 @@ async function login() {
     console.log("JWT Token:", localStorage.getItem("token"));
 
 const historyResponse = await fetch(
-    `http://localhost:8080/carbon/history/${data.id}`,
+    `https://carbon-backend-2.onrender.com/carbon/history/${data.id}`,
     {
         method: "GET",
         headers: {

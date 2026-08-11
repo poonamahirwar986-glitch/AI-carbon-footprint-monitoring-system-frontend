@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "https://carbon-backend-2.onrender.com";
 
 //  GET USER ID 
 
@@ -429,4 +429,5 @@ async function loadChatHistory(){
     }
 
 }
+
 

@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8080/carbon";
+const BASE_URL = "https://carbon-backend-2.onrender.com/carbon";
 
 // LOGGED IN USER 
 
@@ -163,4 +163,5 @@ menuBtn.addEventListener("click", () => {
     }
 
 });
+
 

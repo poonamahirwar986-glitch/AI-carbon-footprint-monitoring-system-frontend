@@ -1,5 +1,5 @@
 
-const BASE_URL = "http://localhost:8080/carbon";
+const BASE_URL = "https://carbon-backend-2.onrender.com/carbon";
 
 const loginUser = JSON.parse(localStorage.getItem("user"));
 
@@ -323,6 +323,7 @@ window.onload = async ()=>{
     loadReports();
 
 };
+
 
 
 
